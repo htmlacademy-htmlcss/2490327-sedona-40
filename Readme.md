@@ -2,6 +2,7 @@
 
 * Студент: [Герт Дерингер](https://up.htmlacademy.ru/htmlcss/40/user/2490327).
 * Наставник: [Валера Хаслер](https://htmlacademy.ru/profile/id224163).
+* Сайт: [Мой проект Седона](https://gerterker.github.io/2490327-sedona-40/).
 
 ---
 
