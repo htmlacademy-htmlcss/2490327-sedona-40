@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
@@ -38,7 +39,7 @@
           </a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link button" href="come-here.html">Хочу сюда!</a>
+          <a class="button navigation-link-button" href="come-here.html">Хочу сюда!</a>
         </li>
       </ul>
     </nav>
@@ -47,14 +48,16 @@
     <section class="hero">
       <h1 class="visually-hidden">Welcome to Sedona</h1>
       <img class="logo" src="images/welcome.svg" width="458" height="352" alt="Логотип главной страницы сайта Седона с подписью: «Welcome to the gorgeous Sedona, 'Because the grand canyon sucks!'»">
-      <!--<img class="hero-background-img" src="#" alt="Фоновое изображение пейзажей окрестностей Седоны">-->
-      <h2 class="represent-title">Седона — небольшой городок в Аризоне, <br>заслуживающий большего!</h2>
-      <p class="represent-description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+    </section>
+    <section class="intro">
+      <h2 class="visually-hidden">Информация о Седоне</h2>
+      <p class="intro-title">Седона — небольшой городок в Аризоне, <br>заслуживающий большего!</p>
+      <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
     </section>
     <section class="advantages">
       <h2 class="visually-hidden">Приемущества</h2>
       <ul class="advantages-list">
-        <li class="advantages-item">
+        <li class="advantages-item item-wide">
           <h3 class="advantages-title">Настоящий <br>городок</h3>
           <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
           <img src="images/advantages/real-town.jpg" width="800" height="385" alt="Фото окрестностей города">
@@ -79,8 +82,9 @@
       </ul>
     </section>
     <section class="represent">
-      <h2 class="represent-title">Приезжайте в Седону отдохнуть <br>в комфорте и уюте!</h2>
-      <p class="represent-description">Опытный персонал и качественное обслуживание!</p>
+      <h2 class="visually-hidden">Презентация</h2>
+      <p class="represent-title">Приезжайте в Седону отдохнуть <br>в комфорте и уюте!</p>
+      <p>Опытный персонал и качественное обслуживание!</p>
     </section>
     <section class="recommendations">
       <ul class="recommendations-list">
@@ -104,15 +108,17 @@
       <h2 class="search-hotel-title">Заинтересовались?</h2>
       <p class="search-hotel-description">Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предложения
         гостиниц в Седоне</p>
-      <button class="button" type="button">Поиск гостиницы в Седоне</a>
+      <a href="catalog.html" class="search-hotel-link">
+        <button class="button button-search" type="button">Поиск гостиницы в Седоне</button>
+      </a>
     </section>
     <section class="subscribe">
       <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
-      <p class="subscribe-description">Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
+      <p>Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
       <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
         <label class="form-label visually-hidden">Введите ваш e-mail</label>
         <input type="email" class="subscribe-input" name="email" placeholder="Ваш e-mail" required>
-        <button class="button" type="submit">Подписаться</button>
+        <button class="button button-subscribe" type="submit">Подписаться</button>
       </form>
     </section>
   </main>
@@ -138,12 +144,11 @@
         </li>
       </ul>
     </section>
-    <a href="tel:88128121212">+7 (812) 812-12-12</a>
-    <section class="logo">
-      <h3 class="visually-hidden">Логотип разработчика htmlacademy</h3>
+    <a href="tel:88128121212" class="foother-number">+7 (812) 812-12-12</a>
+    <section class="logo-academy">
+      <h2 class="visually-hidden">Логотип разработчика htmlacademy</h2>
       <a href="https://htmlacademy.ru/intensive/htmlcss"></a>
     </section>
   </footer>
 </body>
-
 </html>

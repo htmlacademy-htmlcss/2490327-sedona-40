@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
@@ -16,13 +17,13 @@
     <nav class="navigation">
       <ul class="navigation-list">
         <li class="navigation-item">
-          <a class="navigation-link navigation-link-current" href="index.html" aria-current="page">Главная</a>
+          <a class="navigation-link" href="index.html" aria-current="page">Главная</a>
         </li>
         <li class="navigation-item">
           <a class="navigation-link" href="about.html">О Седоне</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link" href="catalog.html">Гостиницы</a>
+          <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a>
         </li>
       </ul>
       <ul class="navigation-list navigation-user">
@@ -38,11 +39,12 @@
           </a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link button" href="come-here.html">Хочу сюда!</a>
+          <a class="button navigation-link-button" href="come-here.html">Хочу сюда!</a>
         </li>
       </ul>
     </nav>
   </header>
+
   <main class="main-inner">
     <section class="filter">
       <header class="filter-header">
@@ -126,8 +128,8 @@
             </li>
           </ul>
         </fieldset>
-        <button class="button" type="submit">Применить</button>
-        <button class="button-reset" type="reset">Сбросить</button>
+        <button class="button button-submit" type="submit">Применить</button>
+        <button class="button button-reset" type="reset">Сбросить</button>
       </form>
     </section>
     <section class="catalog-products">
@@ -163,7 +165,7 @@
           </a>
           <p class="object-card-type">Гостиница</p>
           <p class="object-card-price">От 4000 ₽</p>
-          <a class="object-card-button" href="#">Подробнее</a>
+          <a class="button object-card-button" href="#">Подробнее</a>
           <button type="button" class="object-card-button-favourites button">В избранное</button>
           <div class="stars">
             <span class="visually-hidden">4 звезды</span>
@@ -178,7 +180,7 @@
           <p class="object-card-type">Гостиница</p>
           <p class="object-card-price">От 5000 ₽</p>
           <a class="object-card-button button" href="#">Подробнее</a>
-          <button type="button" class="object-card-button-favourites button-current" href="#">В избранное</button>
+          <button type="button" class="object-card-button-favourites button-current">В избранное</button>
           <div class="stars">
             <span class="visually-hidden">4 звезды</span>
           </div>
@@ -192,7 +194,7 @@
           <p class="object-card-type">Гостиница</p>
           <p class="object-card-price">От 2500 ₽</p>
           <a class="object-card-button button" href="#">Подробнее</a>
-          <button type="button" class="object-card-button-favourites button" href="#">В избранное</button>
+          <button type="button" class="object-card-button-favourites button">В избранное</button>
           <div class="stars">
             <span class="visually-hidden">3 звезды</span>
           </div>
@@ -206,7 +208,7 @@
           <p class="object-card-type">Гостиница</p>
           <p class="object-card-price">От 1500 ₽</p>
           <a class="object-card-button button" href="#">Подробнее</a>
-          <button type="button" class="object-card-button-favourites button" href="#">В избранное</button>
+          <button type="button" class="object-card-button-favourites button">В избранное</button>
           <div class="stars">
             <span class="visually-hidden">2 звезды</span>
           </div>
@@ -227,23 +229,24 @@
           <a class="pagination-link" href="#">4</a>
         </li>
         <li class="pagination-item">
-          <span class="pagination-more">...</span>
+          <a class="pagination-link">...</a>
         </li>
         <li class="pagination-item">
           <a class="pagination-link" href="#">10</a>
         </li>
       </ul>
     </section>
-    <section class="subscribe">
+    <section class="subscribe-catalog">
       <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
-      <p class="subscribe-description">Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
+      <p>Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
       <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-        <label class="form-label visually-hidden">Ваш e-mail</label>
-        <input type="text" class="subscribe-input" name="email" placeholder="Ваш e-mail">
-        <button class="button" type="submit">Подписаться</button>
+        <label class="form-label visually-hidden">Введите ваш e-mail</label>
+        <input type="email" class="subscribe-input" name="email" placeholder="Ваш e-mail" required>
+        <button class="button button-subscribe" type="submit">Подписаться</button>
       </form>
     </section>
   </main>
+
   <footer class="page-foother">
     <section class="social">
       <h2 class="visually-hidden">Социальные сети</h2>
@@ -265,9 +268,9 @@
         </li>
       </ul>
     </section>
-    <a href="tel:88128121212">+7 (812) 812-12-12</a>
-    <section class="logo">
-      <h3 class="visually-hidden">Логотип разработчика htmlacademy</h3>
+    <a href="tel:88128121212" class="foother-number">+7 (812) 812-12-12</a>
+    <section class="logo-academy">
+      <h2 class="visually-hidden">Логотип разработчика htmlacademy</h2>
       <a href="https://htmlacademy.ru/intensive/htmlcss"></a>
     </section>
   </footer>
