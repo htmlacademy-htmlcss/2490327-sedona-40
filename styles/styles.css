@@ -395,12 +395,32 @@ body {
   max-width: 475px;
 }
 
-.button-subscribe {
+.subscribe-form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  width: 684px;
+  box-sizing: border-box;
+}
+
+.subscribe-form button {
   font-size: 20px;
   line-height: 36px;
   min-height: 52px;
   padding: 8px 50px;
   background-color: #82B3D3;
+  border-radius: 0 4px 4px 0;
+}
+
+.subscribe-form input {
+  width: 452px;
+  min-height: 52px;
+  padding: 12px 20px;
+  background-color: #F2F2F2;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  box-sizing: border-box;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 .page-foother {
@@ -589,44 +609,38 @@ body {
 }
 
 .object-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 340px);
   padding: 0;
   margin: 0;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   border-bottom: #E6E6E6 1px solid;
   margin-bottom: 40px;
   list-style-type: none;
 }
 
 .object-card {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 340px;
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  gap: 16px 20px;
   padding: 20px;
   border: 1px solid #E6E6E6;
   border-radius: 4px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-}
-
-.object-card:nth-child(3n) {
-  margin-right: 0;
 }
 
 .object-card-link {
+  grid-column: 1 / -1;
   display: flex;
   flex-direction: column;
   color: #000000;
   text-decoration: none;
-  margin-bottom: 16px;
 }
 
 .object-card-image {
   display: block;
   order: -1;
+  object-fit: contain;
   margin-bottom: 16px;
 }
 
@@ -641,16 +655,13 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.16667;
-  margin-top: 0;
-  margin-bottom: 16px;
 }
 
 .object-card-price {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.16667;
-  margin-top: 0;
-  margin-bottom: 16px;
+  justify-self: end;
 }
 
 .object-card-button {
@@ -662,6 +673,10 @@ body {
   text-transform: uppercase;
   text-align: center;
   min-height: 0;
+}
+
+.object-card-button-favourites {
+  background-color: #82B3D3;
 }
 
 .button-current {
@@ -680,14 +695,11 @@ body {
   cursor: pointer;
 }
 
-.object-card-button-favourites {
-  background-color: #82B3D3;
-}
-
 .object-rating {
   border-radius: 4px;
   width: 140px;
-  height: 37px;
+  min-height: 37px;
+  padding: 9px 22px 8px 23px;
   font-size: 16px;
   line-height: 1.25;
   text-transform: uppercase;
