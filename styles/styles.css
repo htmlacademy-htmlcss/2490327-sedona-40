@@ -699,7 +699,7 @@ body {
 
 .breadcrumbs-item-home {
   display: flex;
-  align-self: center;
+  align-items: center;
 }
 
 .catalog-products {
@@ -1106,7 +1106,7 @@ body {
   background-size: cover;
 }
 
-.breadcrumbs-item-home::after {
+.breadcrumbs-item:not(:last-child)::after {
   content: "";
   display: inline-block;
   width: 7px;
