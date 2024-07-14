@@ -1117,6 +1117,10 @@ body {
   background-size: cover;
 }
 
+.stars-container {
+  position: relative;
+}
+
 .stars {
   display: flex;
   align-items: center;
@@ -1124,6 +1128,9 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
 }
 
 .stars-active {
