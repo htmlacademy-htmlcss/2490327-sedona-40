@@ -727,19 +727,30 @@ body {
 .catalog-filter-list {
   list-style-type: none;
   padding: 0;
+  margin: 0;
+  display: grid;
+  grid-gap: 16px;
 }
 
 .catalog-filter-form {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  height: 160px;
+  /* height: 160px; */
 }
 
 .catalog-filter-infrastructure-container {
   display: flex;
   flex-direction: row;
-  width: 370px;
+  column-gap: 70px;
+  min-width: 370px;
+}
+
+.catalog-filter-infrastructure,
+.catalog-filter-type {
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
 .catalog-filter-price-container {
