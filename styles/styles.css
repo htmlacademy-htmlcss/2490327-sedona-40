@@ -736,7 +736,6 @@ body {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  /* height: 160px; */
 }
 
 .catalog-filter-infrastructure-container {
@@ -843,10 +842,21 @@ body {
   right: -5px;
 }
 
-.catalog-filter-lable {
+.catalog-filter-label {
   position: relative;
 }
 
+.control-label {
+  line-height: 23px;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+}
 
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
