@@ -114,26 +114,28 @@
             <div class="catalog-filter-price-container">
               <fieldset class="catalog-filter-price">
                 <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-                <!-- Довести до ума range -->
-                <ul class="catalog-filter-list">
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      от
-                      <input class="control-input" type="text" name="from" value="0">
+                <div class="range">
+                  <div class="range-wrapper-inputs">
+                    <label class="catalog-filter-lable">
+                      <span class="range-wrapper-inputs-text">от</span>
+                      <input class="range-input range-input-min" type="number" name="min-price" value="0" placeholder="от">
                     </label>
-                  </li>
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      до
-                      <input class="control-input" type="text" name="before" value="9000">
+                    <label class="catalog-filter-lable">
+                      <span class="range-wrapper-inputs-text">до</span>
+                      <input class="range-input range-input-max" type="number" name="max-price" value="9000" placeholder="до">
                     </label>
-                  </li>
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="range" name="price-range" min="0" max="9000">
-                    </label>
-                  </li>
-                </ul>
+                  </div>
+                  <div class="range-scale">
+                    <div class="range-bar" style="right: 60px; width: 226px;">
+                      <button type="button" class="range-toggle toggle-min">
+                        <span class="visually-hidden">Изменить минимальную цену.</span>
+                      </button>
+                      <button type="button" class="range-toggle toggle-max">
+                        <span class="visually-hidden">Изменить максимальную цену.</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </fieldset>
               <div class="catalog-filter-buttons">
                 <button class="button button-submit" type="submit">Применить</button>
@@ -260,21 +262,26 @@
         <ul class="pagination-list">
           <li>
             <a class="pagination-link pagination-link-current" aria-current="page">1</a>
+            <span class="visually-hidden">Первая страница каталога</span>
           </li>
           <li>
             <a class="pagination-link" href="#">2</a>
+            <span class="visually-hidden">Вторая страница каталога</span>
           </li>
           <li>
             <a class="pagination-link" href="#">3</a>
+            <span class="visually-hidden">Треья страница каталога</span>
           </li>
           <li>
             <a class="pagination-link" href="#">4</a>
+            <span class="visually-hidden">Четвертая страница каталога</span>
           </li>
           <li>
             <a class="pagination-link">...</a>
           </li>
           <li>
             <a class="pagination-link" href="#">10</a>
+            <span class="visually-hidden">Последняя страница каталога</span>
           </li>
         </ul>
       </section>

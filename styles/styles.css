@@ -236,7 +236,7 @@ body {
   color: #FFFFFF;
   background-size: 20px 20px;
   background-color: #7DB54F;
-  border-radius: 50%;
+  border-radius: 100vw;
   padding: 5px;
   position: absolute;
   right: 3px;
@@ -507,6 +507,14 @@ body {
   line-height: 24px;
 }
 
+.subscribe-form input:hover {
+  background-color: #E6E6E6;
+}
+
+.subscribe-form input:focus {
+  outline: 3px solid #83B3D3;
+}
+
 .page-foother {
   width: 1200px;
   display: flex;
@@ -712,6 +720,8 @@ body {
   font-size: 20px;
   line-height: 1.2;
   text-transform: capitalize;
+  margin-bottom: 32px;
+  margin-top: 0;
 }
 
 .catalog-filter-list {
@@ -745,9 +755,100 @@ body {
   margin-top: auto;
 }
 
-.control {
+.catalog-filter-price-container fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.range-wrapper-inputs {
+  margin-bottom: 46px;
+}
+
+.range-input-min {
+  border-radius: 4px 0 0 4px;
+}
+
+.range-input-max {
+  border-radius: 0 4px 4px 0;
+}
+
+.range-input {
+  position: relative;
+  width: 143px;
+  padding: 12px 20px;
+  font-family: inherit;
   font-size: 18px;
-  line-height: 1.27778;
+  font-weight: 700;
+  line-height: 24px;
+  border: none;
+}
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #FFFFFF;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:focus {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  outline: 3px solid #83B3D3;
+  border-radius: 5px;
+}
+
+.range-toggle:active {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  outline: 2px solid #83B3D3;
+  border-radius: 5px;
+}
+
+.toggle-min {
+  top: -8px;
+  left: -5px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -5px;
+}
+
+.catalog-filter-lable {
+  position: relative;
+}
+
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.range-input:hover {
+  background-color: #E6E6E6;
+}
+
+.range-input:focus {
+  outline: 3px solid #83B3D3;
 }
 
 .button-reset {
@@ -788,6 +889,15 @@ body {
   font-size: 30px;
   line-height: 1.2;
   text-transform: uppercase;
+}
+
+.range-wrapper-inputs-text {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
 }
 
 .object-list {
@@ -981,8 +1091,6 @@ body {
   background-image: url(../images/catalog-view/arrow.svg);
   background-position: right 20px center;
   background-repeat: no-repeat;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   cursor: pointer;
   font-family: PT Sans;
@@ -1066,18 +1174,6 @@ body {
 
 .object-card-button-favourites-current:disabled {
   background-color: #E5E5E5;
-}
-
-.select-control:hover {
-  border: 2px solid #68A2CA;
-}
-
-.select-control:focus {
-  border: 2px solid #68A2CA;
-}
-
-.select-control:disabled {
-  border: 2px solid rgba(0, 0, 0, 0.30);
 }
 
 .button-reset:hover {
