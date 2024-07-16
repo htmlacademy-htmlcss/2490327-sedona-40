@@ -14,7 +14,9 @@
   font-display: swap;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -754,7 +756,6 @@ body {
 
 .catalog-filter-price-container {
   display: flex;
-  flex-direction: row;
   width: 550px;
   justify-content: space-between;
 }
@@ -798,6 +799,7 @@ body {
   position: relative;
   height: 4px;
   background-color: rgba(255, 255, 255, 0.3);
+  margin-bottom: 6px;
 }
 
 .range-bar {
@@ -834,20 +836,83 @@ body {
 
 .toggle-min {
   top: -8px;
-  left: -5px;
+  left: -6px;
 }
 
 .toggle-max {
   top: -8px;
-  right: -5px;
+  right: -6px;
 }
 
 .catalog-filter-label {
   position: relative;
 }
 
+.catalog-filter-item {
+  line-height: 1.27778;
+}
+
+.control-mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.catalog-filter-type .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark {
+  background-image: url(../images/icons/cross-mark-form.svg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.control-input[type="radio"]:checked + .control-mark {
+  background-image: url(../images/icons/ticket.svg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.control:hover {
+  opacity: 0.6;
+}
+
+.control:active {
+  opacity: 0.3;
+}
+
+.control-input:hover + .control-mark {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+ }
+
+.control-input:focus + .control-mark {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  outline: 3px solid #83B3D3;
+ }
+
+ .control-input:active + .control-mark {
+  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.4);
+ }
+
+ .control-input:disabled {
+  color: #000000;
+  text-decoration: line-through;
+ }
+
+ .control-input:disabled + .control-mark{
+  background-color: #000000;
+  border: 2px solid #FFFFFF;
+ }
+
 .control-label {
-  line-height: 23px;
+  line-height: 1.27778;
   font-weight: 400;
   font-size: 18px;
 }
@@ -856,6 +921,7 @@ body {
   position: relative;
   display: block;
   padding-left: 36px;
+  font-size: 0;
 }
 
 .range-input::-webkit-outer-spin-button,
