@@ -1604,13 +1604,26 @@ input[type="number"]::-webkit-outer-spin-button {
   display: none;
 }
 
-.tooltip-text:after {
+/* .tooltip-text:after {
   content:'';
   position: absolute;
   left: 50%;
   top: -15px;
   border: 9px solid transparent;
   border-bottom: 9px solid #333333;
+} */
+
+.tooltip-text:after {
+  content:'';
+  background-image: url("../images/icons/tooltip-arrow.svg");
+  width: 19px;
+  height: 9px;
+  position:absolute;
+  top: -5%;
+  left: 20px;
+  right:0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .tooltip-toggle:hover + .tooltip-text,
@@ -1648,6 +1661,6 @@ input[type="number"]::-webkit-outer-spin-button {
   background-color: #E5E5E5;
 }
 
-.modal-container-close {
+/* .modal-container-close {
   display: none;
-}
+} */
