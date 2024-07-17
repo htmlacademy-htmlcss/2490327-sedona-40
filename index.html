@@ -57,6 +57,7 @@
         <p class="intro-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
         <p class="intro-description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
       </section>
+
       <section class="advantages">
         <h2 class="visually-hidden">Приемущества</h2>
         <ul class="advantages-list">
@@ -94,11 +95,13 @@
           </li>
         </ul>
       </section>
+
       <section class="represent">
         <h2 class="visually-hidden">Презентация</h2>
         <p class="represent-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
         <p class="represent-description">Опытный персонал и качественное обслуживание!</p>
       </section>
+
       <section class="recommendations">
         <ul class="recommendations-list">
           <li class="recommendations-item">
@@ -117,6 +120,7 @@
           </li>
         </ul>
       </section>
+
       <section class="search-hotel">
         <div class="search-hotel-container">
           <h2 class="search-hotel-title">Заинтересовались?</h2>
@@ -127,6 +131,7 @@
           </a>
         </div>
       </section>
+
       <section class="subscribe">
         <div class="subscribe-container">
           <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
@@ -167,6 +172,7 @@
           </li>
         </ul>
       </section>
+
       <a href="tel:88128121212" class="foother-number">+7 (812) 812-12-12</a>
       <section class="logo-academy">
         <h2 class="visually-hidden">Логотип разработчика htmlacademy</h2>
@@ -191,20 +197,51 @@
               <label class="modal-label" for="arrival-date">
                 Дата Заезда:
               </label>
-              <input class="modal-date-input" type="date" value="2020-04-27" id="arrival-date" placeholder="Укажите дату">
+              <input class="modal-date-input" type="text" value="27 апреля 2020" id="arrival-date" placeholder="Укажите дату">
               <span class="message-description error-message-description">Мы не можем отправить вас в прошлое.</span>
             </li>
             <li class="modal-date-list-item">
               <label class="modal-label" for="departure-date">
                 Дата Выезда:
               </label>
-              <input class="modal-date-input" type="date" value="2023-09-01" id="departure-date" placeholder="Укажите дату">
+              <input class="modal-date-input" type="text" value="1 сентября 2023" id="departure-date" placeholder="Укажите дату">
               <span class="message-description">На эти даты есть свободные номера. Пока есть.</span>
             </li>
           </ul>
           <ul class="modal-visiters-list">
-            <li class="modal-visiters-list-item"></li>
-            <li class="modal-visiters-list-item"></li>
+            <li class="modal-visiters-list-item">
+              <label class="modal-label">
+                Взрослые:
+              </label>
+              <div class="modal-container-wrapper">
+                <button class="modal-visiters-button modal-visiters-button-minus"></button>
+                <span class="visually-hidden">Уменьить количество взрослых.</span>
+                <input class="modal-visiters-input" type="number" value="2">                <button class="modal-visiters-button modal-visiters-button-plus"></button>
+                <span class="visually-hidden">Увеличить количество взрослых.</span>
+              </div>
+            </li>
+            <li class="modal-visiters-list-item">
+              <label class="modal-labe">
+                Дети:
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                    <svg class="tooltip-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z" />
+                    </svg>
+                  </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст
+                    которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                 </span>
+                </span>
+              </label>
+              <div class="modal-container-wrapper">
+                <button class="modal-visiters-button modal-visiters-button-minus"></button>
+                <span class="visually-hidden">Уменьить количество детей.</span>
+                <input class="modal-visiters-input" type="number" value="2">
+                <button class="modal-visiters-button modal-visiters-button-plus"></button>
+                <span class="visually-hidden">Увеличить количество детей.</span>
+              </div>
+            </li>
           </ul>
           <button class="button button-modal">
             Найти
@@ -214,5 +251,6 @@
       </section>
     </div>
   </div>
+
 </body>
 </html>
