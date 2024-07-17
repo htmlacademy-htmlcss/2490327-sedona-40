@@ -1374,12 +1374,100 @@ body {
 
 .modal-title {
   margin: 0;
+  font-style: normal;
   font-weight: 700;
   font-size: 30px;
   line-height: 1.2;
   text-transform: uppercase;
+  margin-bottom: 64px;
 }
 
 .modal-content {
   width: 577px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-date-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-date-list, .modal-visiters-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.modal-date-list-item {
+  display: grid;
+  grid-template-columns: 1fr 440px;
+  grid-template-rows: repeat(2, 48px);
+  /* gap: 0 4px; */
+}
+
+.modal-label {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  text-transform: capitalize;
+  align-self: center;
+}
+
+.modal-date-input {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.33333;
+  opacity: 0.6;
+  border-radius: 4px;
+  background-color: #F2F2F2;
+  border: none;
+  padding: 12px 20px;
+  /* background-image: url(../images/icons/calendar.svg);
+  background-size: 12px 20px cover;
+  background-repeat: no-repeat;
+  background-position: 95% 50%; */
+}
+
+.modal-date-input:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-date-input:visited {
+  opacity: 1;
+}
+
+.modal-date-input:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.message-description {
+  grid-column: 2 / -1;
+  grid-row: 2 / -1;
+  margin: 4px 0 23px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.3125;
+  padding: 0 20px;
+}
+
+.error-message-description {
+  color: #FF5757;
+}
+
+.button-modal {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #82B3D3;
+  border-radius: 10px;
+  padding: 18px 20px;
+  cursor: pointer;
 }

@@ -185,7 +185,32 @@
       </button>
       <section class="modal-content">
         <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-
+        <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+          <ul class="modal-date-list">
+            <li class="modal-date-list-item">
+              <label class="modal-label" for="arrival-date">
+                Дата Заезда:
+              </label>
+              <input class="modal-date-input" type="date" value="2020-04-27" id="arrival-date" placeholder="Укажите дату">
+              <span class="message-description error-message-description">Мы не можем отправить вас в прошлое.</span>
+            </li>
+            <li class="modal-date-list-item">
+              <label class="modal-label" for="departure-date">
+                Дата Выезда:
+              </label>
+              <input class="modal-date-input" type="date" value="2023-09-01" id="departure-date" placeholder="Укажите дату">
+              <span class="message-description">На эти даты есть свободные номера. Пока есть.</span>
+            </li>
+          </ul>
+          <ul class="modal-visiters-list">
+            <li class="modal-visiters-list-item"></li>
+            <li class="modal-visiters-list-item"></li>
+          </ul>
+          <button class="button button-modal">
+            Найти
+            <span class="visually-hidden">Найти номер</span>
+          </button>
+        </form>
       </section>
     </div>
   </div>
