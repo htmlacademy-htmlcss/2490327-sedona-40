@@ -862,7 +862,7 @@ body {
 
 .toggle-max {
   top: -8px;
-  right: -6px;
+  right: 0;
 }
 
 .catalog-filter-label {
@@ -983,7 +983,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   width: 1060px;
 }
 
@@ -1179,6 +1179,18 @@ body {
 .pagination-link-current {
   color: #000000;
   background-color: #F2F2F2;
+}
+
+.pagination-link-disable {
+  background-color: #FFFFFF;
+  color: #000;
+}
+
+.pagination-link-disable:hover,
+.pagination-link-disable:focus,
+.pagination-link-disable:active {
+  background-color: #FFFFFF;
+  color: #000000;
 }
 
 .pagination-link-current:hover,
