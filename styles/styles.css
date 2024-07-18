@@ -784,12 +784,20 @@ body {
 .range-input {
   position: relative;
   width: 143px;
-  padding: 12px 20px;
+  padding: 12px 53px 12px 20px;
   font-family: inherit;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
   border: none;
+}
+
+.range-input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.33333;
 }
 
 .range-scale {
@@ -897,24 +905,11 @@ body {
 .control-input:focus + .control-mark {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   outline: 3px solid #83B3D3;
- }
+}
 
- .control-input:active + .control-mark {
+.control-input:active + .control-mark {
   box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.4);
- }
-
- .control-input:disabled {
-  color: #000000;
-  text-decoration: line-through;
- }
-
- .control-input:disabled + .control-mark + .control-label {
-  opacity: 0.3;
- }
-
- .control-input:disabled + .control-mark {
-  opacity: 0.3;
- }
+}
 
 .control-label {
   line-height: 1.27778;
@@ -927,6 +922,11 @@ body {
   display: block;
   padding-left: 36px;
   font-size: 0;
+}
+
+.control:has(.control-input:disabled) {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .range-input::-webkit-outer-spin-button,
@@ -1416,7 +1416,7 @@ body {
 .modal-date-list-item {
   display: grid;
   grid-template-columns: 1fr 440px;
-  grid-template-rows: repeat(2, 48px);
+  grid-template-rows: repeat(2, auto);
 }
 
 .modal-label {
@@ -1434,7 +1434,7 @@ body {
   border-radius: 4px;
   background-color: #F2F2F2;
   border: none;
-  padding: 12px 20px;
+  padding: 12px 56px 12px 20px;
   background-image: url(../images/icons/calendar.svg);
   background-repeat: no-repeat;
   background-position: 95% 50%;
@@ -1511,7 +1511,20 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .modal-visiters-button-minus:hover,
 .modal-visiters-button-plus:hover {
-  color: #000;
+  background-color: #E6E6E6;
+}
+
+.modal-visiters-button-minus:active,
+.modal-visiters-button-plus:active {
+  background-color: #E6E6E6;
+  border: 2px solid #83B3D3;
+}
+
+.modal-visiters-button-minus:focus,
+.modal-visiters-button-plus:focus {
+  background-color: #E6E6E6;
+  border: 2px solid #83B3D3;
+  outline: none;
 }
 
 .modal-visiters-button-plus {
@@ -1545,6 +1558,17 @@ input[type="number"]::-webkit-outer-spin-button {
   font-size: 18px;
   line-height: 1.11111;
   text-align: center;
+  padding: 0 6px 0 6px;
+}
+
+.modal-visiters-input:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-visiters-input:focus {
+  background-color: #E6E6E6;
+  border: 2px solid #83B3D3;
+  outline: none;
 }
 
 .tooltip-toggle {
@@ -1649,6 +1673,6 @@ input[type="number"]::-webkit-outer-spin-button {
   background-color: #E5E5E5;
 }
 
-.modal-container-close {
+/* .modal-container-close {
   display: none;
-}
+} */
