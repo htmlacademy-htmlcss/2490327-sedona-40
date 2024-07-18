@@ -1632,9 +1632,6 @@ body {
   height: 12px;
   fill: #FFFFFF;
   display: block;
-  /* position: absolute;
-  left: 43%;
-  top: 30%; */
 }
 
 .tooltip-toggle:hover {
@@ -1706,10 +1703,6 @@ body {
 .button-modal:disabled {
   background-color: #E5E5E5;
 }
-/*
-.modal-container-close {
-  display: none;
-} */
 
 .visually-hidden {
   position: absolute;
@@ -1720,4 +1713,8 @@ body {
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.modal-container-close {
+  display: none;
 }
