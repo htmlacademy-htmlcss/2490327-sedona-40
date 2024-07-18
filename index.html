@@ -12,14 +12,14 @@
 <body>
   <div class="container">
     <header class="header-main">
-      <a href="index.html" aria-current="page">
+      <a class="page-header-logo-link" href="index.html" aria-current="page">
         <span class="visually-hidden">Логотип города Седона</span>
         <img class="page-header-logo" src="images/logo-Sedona.svg" width="140" height="70" alt="Логотип города Седона.">
       </a>
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link navigation-link-current" aria-current="page">Главная</a>
+            <a class="navigation-link navigation-link-current" href="#" aria-current="page">Главная</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="about.html">О Седоне</a>
@@ -200,14 +200,14 @@
               <label class="modal-label" for="arrival-date">
                 Дата Заезда:
               </label>
-              <input class="modal-date-input" type="text" value="27 апреля 2020" id="arrival-date" placeholder="Укажите дату">
+              <input class="modal-date-input" type="text" value="27 апреля 2020" id="arrival-date" placeholder="Укажите дату" required>
               <span class="message-description error-message-description">Мы не можем отправить вас в прошлое.</span>
             </li>
             <li class="modal-date-list-item">
               <label class="modal-label" for="departure-date">
                 Дата Выезда:
               </label>
-              <input class="modal-date-input" type="text" value="1 сентября 2023" id="departure-date" placeholder="Укажите дату">
+              <input class="modal-date-input" type="text" value="1 сентября 2023" id="departure-date" placeholder="Укажите дату" required>
               <span class="message-description">На эти даты есть свободные номера. Пока есть.</span>
             </li>
           </ul>
@@ -219,12 +219,13 @@
               <div class="modal-container-wrapper">
                 <button class="modal-visiters-button modal-visiters-button-minus" type="button"></button>
                 <span class="visually-hidden">Уменьить количество взрослых.</span>
-                <input class="modal-visiters-input" type="number" value="2">                <button class="modal-visiters-button modal-visiters-button-plus" type="button"></button>
+                <input class="modal-visiters-input" type="text" value="2" placeholder="1" required>
+                <button class="modal-visiters-button modal-visiters-button-plus" type="button"></button>
                 <span class="visually-hidden">Увеличить количество взрослых.</span>
               </div>
             </li>
             <li class="modal-visiters-list-item">
-              <label class="modal-labe">
+              <label class="modal-label modal-label-child">
                 Дети:
                 <span class="tooltip">
                   <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
@@ -240,7 +241,7 @@
               <div class="modal-container-wrapper">
                 <button class="modal-visiters-button modal-visiters-button-minus" type="button"></button>
                 <span class="visually-hidden">Уменьить количество детей.</span>
-                <input class="modal-visiters-input" type="number" value="2">
+                <input class="modal-visiters-input" type="text" value="2" placeholder="0">
                 <button class="modal-visiters-button modal-visiters-button-plus" type="button"></button>
                 <span class="visually-hidden">Увеличить количество детей.</span>
               </div>

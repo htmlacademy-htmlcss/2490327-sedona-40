@@ -12,7 +12,7 @@
 <body>
   <div class="container">
     <header class="header-main">
-      <a href="index.html">
+      <a class="page-header-logo-link" href="index.html">
         <span class="visually-hidden">Логотип города Седона</span>
         <img class="page-header-logo" src="images/logo-Sedona.svg" width="140" height="70" alt="Логотип города Седона.">
       </a>
@@ -25,7 +25,7 @@
             <a class="navigation-link" href="about.html">О Седоне</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link navigation-link-current" aria-current="page">Гостиницы</a>
+            <a class="navigation-link navigation-link-current" href="#" aria-current="page">Гостиницы</a>
           </li>
         </ul>
         <ul class="navigation-user-list">
@@ -123,11 +123,11 @@
                 <div class="range-wrapper-inputs">
                   <label class="catalog-filter-label">
                       <span class="range-wrapper-inputs-text">от</span>
-                      <input class="range-input range-input-min" type="number" name="min-price" value="0" placeholder="Цена">
+                      <input class="range-input range-input-min" type="text" name="min-price" value="0" placeholder="Цена">
                   </label>
                   <label class="catalog-filter-label">
                     <span class="range-wrapper-inputs-text">до</span>
-                    <input class="range-input range-input-max" type="number" name="max-price" value="9000" placeholder="Цена">
+                    <input class="range-input range-input-max" type="text" name="max-price" value="9000" placeholder="Цена">
                   </label>
                 </div>
                 <div class="range-scale">
@@ -304,7 +304,7 @@
     </main>
 
     <footer class="page-foother">
-      <section>
+      <section class="social">
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="social-list">
           <li>
@@ -330,8 +330,9 @@
           </li>
         </ul>
       </section>
-
-      <a href="tel:88128121212" class="foother-number">+7 (812) 812-12-12</a>
+      <section class="contacts">
+        <a href="tel:88128121212" class="foother-number">+7 (812) 812-12-12</a>
+      </section>
       <section class="logo-academy">
         <h2 class="visually-hidden">Логотип разработчика htmlacademy</h2>
         <a href="https://htmlacademy.ru/intensive/htmlcss">
@@ -374,13 +375,13 @@
               <div class="modal-container-wrapper">
                 <button class="modal-visiters-button modal-visiters-button-minus" type="button"></button>
                 <span class="visually-hidden">Уменьить количество взрослых.</span>
-                <input class="modal-visiters-input" type="number" value="2" placeholder="1" required>
+                <input class="modal-visiters-input" type="text" value="2" placeholder="1" required>
                 <button class="modal-visiters-button modal-visiters-button-plus" type="button"></button>
                 <span class="visually-hidden">Увеличить количество взрослых.</span>
               </div>
             </li>
             <li class="modal-visiters-list-item">
-              <label class="modal-labe">
+              <label class="modal-label modal-label-child">
                 Дети:
                 <span class="tooltip">
                   <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
@@ -396,7 +397,7 @@
               <div class="modal-container-wrapper">
                 <button class="modal-visiters-button modal-visiters-button-minus" type="button"></button>
                 <span class="visually-hidden">Уменьить количество детей.</span>
-                <input class="modal-visiters-input" type="number" value="2" placeholder="0">
+                <input class="modal-visiters-input" type="text" value="2" placeholder="0">
                 <button class="modal-visiters-button modal-visiters-button-plus" type="button"></button>
                 <span class="visually-hidden">Увеличить количество детей.</span>
               </div>

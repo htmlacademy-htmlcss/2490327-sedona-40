@@ -24,17 +24,6 @@ html {
   height: 100%;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 body {
   min-height: 100%;
   margin: 0;
@@ -80,6 +69,12 @@ body {
 .page-header-logo {
   display: block;
   position: absolute;
+  z-index: 1;
+}
+
+.page-header-logo-link {
+  width: 140px;
+  display: flex;
   z-index: 1;
 }
 
@@ -240,21 +235,25 @@ body {
 
 .likes {
   position: relative;
+  align-self: start;
 }
 
 .likes span {
-  text-align: center;
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
   line-height: 10px;
   color: #FFFFFF;
-  background-size: 20px 20px;
   background-color: #7DB54F;
-  border-radius: 100vw;
+  border-radius: 50%;
   padding: 5px;
   position: absolute;
-  right: 3px;
+  right: 4px;
+  display: flex;
+  width: 20px;
+  height: 20px;
+  justify-content: center;
+  align-content: center;
 }
 
 .advantages {
@@ -513,13 +512,13 @@ body {
 .subscribe-form input {
   width: 452px;
   min-height: 52px;
-  padding: 12px 20px;
+  padding: 14px 20px;
   background-color: #F2F2F2;
   border: none;
   border-radius: 4px 0 0 4px;
   box-sizing: border-box;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 1.33333;
 }
 
 .subscribe-form input:hover {
@@ -530,15 +529,30 @@ body {
   outline: 3px solid #83B3D3;
 }
 
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 350px;
+}
+
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
 .page-foother {
   width: 1200px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   padding: 40px 70px 30px 70px;
 }
 
 .foother-number {
+  display: flex;
+  flex-direction: column;
   color: #000000;
   font-size: 40px;
   line-height: 1;
@@ -570,15 +584,14 @@ body {
   padding: 0;
   min-width: 142px;
   list-style-type: none;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .social-link {
-  display: block;
+  display: flex;
   text-decoration: none;
-  width: 47px;
-  height: 40px;
-  padding: 10px;
+  padding: 5px;
+  align-items: end;
 }
 
 .logo-telegram {
@@ -727,7 +740,7 @@ body {
 
 .catalog-products {
   width: 1200px;
-  padding: 50px 70px 60px;
+  padding: 48px 70px 60px;
 }
 
 .catalog-filter-title {
@@ -1503,19 +1516,10 @@ body {
   margin-bottom: 48px;
 }
 
-.modal-visiters-list .modal-label {
-  padding-right: 46px;
-}
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
 .modal-visiters-list-item {
   display: flex;
   align-items: center;
+  gap: 46px;
 }
 
 .modal-container-wrapper {
@@ -1601,20 +1605,26 @@ input[type="number"]::-webkit-outer-spin-button {
   outline: none;
 }
 
-.tooltip-toggle {
-  display: inline-block;
+.modal-label-child {
+  display: flex;
+  gap: 10px;
+}
+
+.tooltip {
+  display: flex;
   position: relative;
+}
+
+.tooltip-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #83B3D3;
   width: 26px;
   height: 26px;
   border: none;
   border-radius: 50%;
   background-position: 50% 50%;
-  margin-left: 10px;
-}
-
-.modal-visiters-list-item:nth-child(2) .modal-labe {
-  width: 131px;
 }
 
 .tooltip-icon {
@@ -1622,16 +1632,9 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 12px;
   fill: #FFFFFF;
   display: block;
-  margin: 0;
-  position: absolute;
+  /* position: absolute;
   left: 43%;
-  top: 30%;
-}
-
-.tooltip {
-  position: absolute;
-  width: 25px;
-  height: 25px;
+  top: 30%; */
 }
 
 .tooltip-toggle:hover {
@@ -1641,8 +1644,9 @@ input[type="number"]::-webkit-outer-spin-button {
 .tooltip-text {
   background-color: #333333;
   color: #FFFFFF;
+  font-weight: 400;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   text-transform: none;
   padding: 20px 18px 18px 22px;
   border-radius: 10px;
@@ -1662,8 +1666,8 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 9px;
   position:absolute;
   top: -5%;
-  left: 20px;
-  right:0;
+  left: 0;
+  right: 0;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1702,7 +1706,18 @@ input[type="number"]::-webkit-outer-spin-button {
 .button-modal:disabled {
   background-color: #E5E5E5;
 }
-
-/* .modal-container-close {
+/*
+.modal-container-close {
   display: none;
 } */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
