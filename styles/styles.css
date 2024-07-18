@@ -68,7 +68,6 @@ body {
   width: 1200px;
   padding: 0 70px;
   justify-content: space-between;
-  margin-bottom: -6px;
 }
 
 .navigation {
@@ -80,7 +79,7 @@ body {
 
 .page-header-logo {
   display: block;
-  position: relative;
+  position: absolute;
   z-index: 1;
 }
 
@@ -90,7 +89,7 @@ body {
   margin: 0;
   padding: 0;
   align-items: center;
-  width: 500px;
+  min-width: 400px;
   list-style-type: none;
   font-weight: 700;
   font-size: 20px;
@@ -121,10 +120,24 @@ body {
   align-items: center;
 }
 
+.logo-clip {
+  transform: rotate(180deg);
+}
+
 .navigation-link {
-  padding: 0 0 14px 0;
+  position: relative;
+  padding: 18px 0;
   color: #000000;
   text-decoration: none;
+  z-index: 1;
+}
+
+.navigation-link:hover {
+  opacity: 0.3;
+}
+
+.navigation-link:active {
+  opacity: 0.6;
 }
 
 .navigation-link-current {
@@ -141,10 +154,6 @@ body {
   line-height: 1.25;
   text-transform: uppercase;
   list-style-type: none;
-}
-
-.navigation-user-list .navigation-item:nth-child(1) {
-  margin-right: 10px;
 }
 
 .navigation-user-list .navigation-item:nth-child(2) {
@@ -178,11 +187,16 @@ body {
   background-color: #756157;
   text-decoration: none;
   color: #FFFFFF;
-  padding: 8px 50px;
+  padding: 8px 10px;
   min-height: 100%;
+  width: 160px;
 }
 
 .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 25px;
   background-color: blue ;
   background-image: url(../images/background/background-index.jpg);
   width: 1200px;
@@ -190,11 +204,12 @@ body {
   background-repeat: no-repeat;
   min-height: 485px;
   text-align: center;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 88.04%, 80% 94.06%, 80% 88.04%, 50% 100%, 20% 88.04%, 20% 94.06%, 0% 88.04%);
 }
 
 .logo {
-  margin: 51px 371px 82px;
+  display: block;
+  margin: 0 auto;
+  background-position: center;
 }
 
 .intro {
@@ -206,6 +221,7 @@ body {
   padding: 69px 0;
   text-align: center;
   width: 1200px;
+  margin-bottom: 21px;
 }
 
 .intro-title {
@@ -1673,6 +1689,6 @@ input[type="number"]::-webkit-outer-spin-button {
   background-color: #E5E5E5;
 }
 
-/* .modal-container-close {
+.modal-container-close {
   display: none;
-} */
+}
