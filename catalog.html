@@ -355,14 +355,14 @@
               <label class="modal-label" for="arrival-date">
                 Дата Заезда:
               </label>
-              <input class="modal-date-input" type="text" value="27 апреля 2020" id="arrival-date" placeholder="Укажите дату">
+              <input class="modal-date-input" type="text" value="27 апреля 2020" id="arrival-date" placeholder="Укажите дату" required>
               <span class="message-description error-message-description">Мы не можем отправить вас в прошлое.</span>
             </li>
             <li class="modal-date-list-item">
               <label class="modal-label" for="departure-date">
                 Дата Выезда:
               </label>
-              <input class="modal-date-input" type="text" value="1 сентября 2023" id="departure-date" placeholder="Укажите дату">
+              <input class="modal-date-input" type="text" value="1 сентября 2023" id="departure-date" placeholder="Укажите дату" required>
               <span class="message-description">На эти даты есть свободные номера. Пока есть.</span>
             </li>
           </ul>
@@ -374,7 +374,8 @@
               <div class="modal-container-wrapper">
                 <button class="modal-visiters-button modal-visiters-button-minus" type="button"></button>
                 <span class="visually-hidden">Уменьить количество взрослых.</span>
-                <input class="modal-visiters-input" type="number" value="2">                <button class="modal-visiters-button modal-visiters-button-plus" type="button"></button>
+                <input class="modal-visiters-input" type="number" value="2" required>
+                <button class="modal-visiters-button modal-visiters-button-plus" type="button"></button>
                 <span class="visually-hidden">Увеличить количество взрослых.</span>
               </div>
             </li>
