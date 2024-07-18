@@ -1448,6 +1448,7 @@ body {
 }
 
 .modal-label {
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.2;
@@ -1456,6 +1457,7 @@ body {
 }
 
 .modal-date-input {
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.33333;
@@ -1701,6 +1703,6 @@ input[type="number"]::-webkit-outer-spin-button {
   background-color: #E5E5E5;
 }
 
-.modal-container-close {
+/* .modal-container-close {
   display: none;
-}
+} */
