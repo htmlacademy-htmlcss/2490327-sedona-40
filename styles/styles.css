@@ -62,7 +62,7 @@ body {
 .navigation {
   min-width: 890px;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -84,7 +84,7 @@ body {
   margin: 0;
   padding: 0;
   align-items: center;
-  min-width: 400px;
+  width: 500px;
   list-style-type: none;
   font-weight: 700;
   font-size: 20px;
@@ -115,9 +115,9 @@ body {
   align-items: center;
 }
 
-.logo-clip {
+/* .logo-clip {
   transform: rotate(180deg);
-}
+} */
 
 .navigation-link {
   position: relative;
@@ -140,7 +140,7 @@ body {
 }
 
 .navigation-list .navigation-item {
-  padding: 0 16px 0 16px;
+  padding: 18px 16px 18px 16px;
 }
 
 .navigation-list + .navigation-user-list {
@@ -239,21 +239,18 @@ body {
 }
 
 .likes span {
+  text-align: center;
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
   line-height: 10px;
   color: #FFFFFF;
+  background-size: 20px 20px;
   background-color: #7DB54F;
   border-radius: 50%;
   padding: 5px;
   position: absolute;
-  right: 4px;
-  display: flex;
-  width: 20px;
-  height: 20px;
-  justify-content: center;
-  align-content: center;
+  right: 3px;
 }
 
 .advantages {
@@ -460,9 +457,9 @@ body {
 .subscribe {
   background-color: blue;
   background-image: url(../images/background/background-subscribe.jpg);
-  width: 1200px;
-  height: 414px;
   background-repeat: no-repeat;
+  width: 1200px;
+  min-height: 415px;
   color: #ffffff;
   text-align: center;
 }
@@ -986,8 +983,7 @@ body {
 .button-submit {
   border-radius: 4px;
   padding: 8px 50px;
-  width: 191px;
-  height: 36px;
+  min-width: 191px;
   background-color: #82B3D3;
   margin-bottom: 32px;
 }
@@ -1221,7 +1217,7 @@ body {
   border-radius: 4px;
   border: 2px solid #E5E5E5;
   background-color: #FFFFFF;
-  background-image: url(../images/catalog-view/arrow.svg);
+  background-image: url(../images/icons/arrow.svg);
   background-position: right 20px center;
   background-repeat: no-repeat;
   appearance: none;
@@ -1232,6 +1228,21 @@ body {
   font-weight: 400;
   line-height: 21px;
   color: #333333;
+}
+
+.select-control:hover {
+  border: 2px solid #68A2CA;
+}
+
+.select-control:focus {
+  border: 2px solid #68A2CA;
+  outline: none;
+}
+
+.select-control:disabled {
+  border: 2px solid #000000;
+  outline: none;
+  opacity: 0.3;
 }
 
 .form-label {
