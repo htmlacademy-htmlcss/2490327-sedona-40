@@ -62,7 +62,6 @@ body {
 .navigation {
   min-width: 890px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -110,14 +109,12 @@ body {
 
 .navigation-user-list {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 320px;
   margin: 0;
   padding: 0;
   align-items: center;
 }
-
-/* .logo-clip {
-  transform: rotate(180deg);
-} */
 
 .navigation-link {
   position: relative;
@@ -718,6 +715,7 @@ body {
 
 .breadcrumbs-list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -737,7 +735,7 @@ body {
 
 .catalog-products {
   width: 1200px;
-  padding: 48px 70px 60px;
+  padding: 50px 70px 60px;
 }
 
 .catalog-filter-title {
@@ -766,7 +764,7 @@ body {
 .catalog-filter-infrastructure-container {
   display: flex;
   flex-direction: row;
-  column-gap: 70px;
+  column-gap: 65px;
   min-width: 370px;
 }
 
@@ -1108,17 +1106,21 @@ body {
 
 .pagination-list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-self: start;
+  gap: 8px;
   margin: 0;
   padding: 0;
   list-style-type: none;
-  width: 400px;
+  width: 1060px;
 }
 
 .button-catalog-list {
   display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: start;
   width: 160px;
-  justify-content: space-between;
   margin: 0;
   padding: 0;
   list-style-type: none;
