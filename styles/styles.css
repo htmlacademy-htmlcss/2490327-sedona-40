@@ -952,7 +952,8 @@ body {
 
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   margin: 0;
 }
 
@@ -1215,7 +1216,8 @@ body {
   background-image: url("../images/icons/arrow.svg");
   background-position: right 20px center;
   background-repeat: no-repeat;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   cursor: pointer;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
