@@ -11,8 +11,8 @@
 
 <body>
   <div class="container">
-    <header class="header-main">
-      <a class="page-header-logo-link" href="index.html">
+    <header class="header-main" data-test="header">
+      <a class="page-header-logo-link" href="index.html" aria-current="page">
         <span class="visually-hidden">Логотип города Седона</span>
         <img class="page-header-logo" src="images/logo-Sedona.svg" width="140" height="70" alt="Логотип города Седона.">
       </a>
@@ -29,13 +29,13 @@
           </li>
         </ul>
         <ul class="navigation-user-list">
-          <li class="navigation-item">
-            <a class="navigation-link" href="search.html">
+          <li class="navigation-item navigation-user-item">
+            <a class="navigation-link navigation-search" href="search.html">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link likes" href="favorites.html">
+          <li class="navigation-item navigation-user-item">
+            <a class="navigation-link navigation-likes" href="favorites.html">
               <span class="visually-hidden">Отелей в избранном:</span>
               <span>12</span>
             </a>
@@ -131,7 +131,7 @@
                   </label>
                 </div>
                 <div class="range-scale">
-                  <div class="range-bar" style="right: 65px; width: 220px;">
+                  <div class="range-bar">
                     <button class="range-toggle toggle-min" type="button">
                       <span class="visually-hidden">Изменить минимальную стоимость.</span>
                     </button>
@@ -197,12 +197,7 @@
             <button class="object-card-button-favourites button" type="submit">В избранное</button>
             <div class="stars-container">
               <span class="visually-hidden">4 звезды</span>
-              <ul class="stars">
-                <li class="stars-active"></li>
-                <li class="stars-active"></li>
-                <li class="stars-active"></li>
-                <li class="stars-active"></li>
-              </ul>
+              <span class="stars stars-4"></span>
             </div>
             <span class="object-rating">Рейтинг: 8,5</span>
           </li>
@@ -217,12 +212,7 @@
             <button class="object-card-button-favourites-current button" type="submit">В избранном</button>
             <div class="stars-container">
               <span class="visually-hidden">4 звезды</span>
-              <ul class="stars">
-                <li class="stars-active"></li>
-                <li class="stars-active"></li>
-                <li class="stars-active"></li>
-                <li class="stars-active"></li>
-              </ul>
+              <span class="stars stars-4"></span>
             </div>
             <span class="object-rating">Рейтинг: 9,2</span>
           </li>
@@ -237,11 +227,7 @@
             <button class="object-card-button-favourites button" type="submit">В избранное</button>
             <div class="stars-container">
               <span class="visually-hidden">3 звезды</span>
-              <ul class="stars">
-                <li class="stars-active"></li>
-                <li class="stars-active"></li>
-                <li class="stars-active"></li>
-              </ul>
+              <span class="stars stars-3"></span>
             </div>
             <span class="object-rating">Рейтинг: 6,9</span>
           </li>
@@ -256,10 +242,7 @@
             <button class="object-card-button-favourites button" type="submit">В избранное</button>
             <div class="stars-container">
               <span class="visually-hidden">2 звезды</span>
-              <ul class="stars">
-                <li class="stars-active"></li>
-                <li class="stars-active"></li>
-              </ul>
+              <span class="stars stars-2"></span>
             </div>
             <span class="object-rating">Рейтинг: 5,0</span>
           </li>
@@ -297,7 +280,7 @@
           <p class="subscribe-description">Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="form-label visually-hidden">Введите ваш e-mail</label>
-            <input type="email" name="email" placeholder="Ваш e-mail" required>
+            <input class="subscribe-form-input" type="email" name="email" placeholder="Ваш e-mail" required>
             <button class="button button-subscribe" type="submit">Подписаться</button>
           </form>
         </div>
@@ -332,7 +315,10 @@
         </ul>
       </section>
 
-      <a href="tel:88128121212" class="foother-number">+7 (812) 812-12-12</a>
+      <section class="contacts">
+        <h2 class="visually-hidden">Контакты</h2>
+        <a href="tel:88128121212" class="foother-number">+7 (812) 812-12-12</a>
+      </section>
 
       <section class="logo-academy">
         <h2 class="visually-hidden">Логотип разработчика htmlacademy</h2>
@@ -357,14 +343,14 @@
               <label class="modal-label" for="arrival-date">
                 Дата Заезда:
               </label>
-              <input class="modal-date-input" type="text" value="27 апреля 2020" id="arrival-date" placeholder="Укажите дату" required>
+              <input class="modal-date-input" name="arrival-date" type="text" value="27 апреля 2020" id="arrival-date" placeholder="Укажите дату" required>
               <span class="message-description error-message-description">Мы не можем отправить вас в прошлое.</span>
             </li>
             <li class="modal-date-list-item">
               <label class="modal-label" for="departure-date">
                 Дата Выезда:
               </label>
-              <input class="modal-date-input" type="text" value="1 сентября 2023" id="departure-date" placeholder="Укажите дату" required>
+              <input class="modal-date-input" name="departure-date" type="text" value="1 сентября 2023" id="departure-date" placeholder="Укажите дату" required>
               <span class="message-description">На эти даты есть свободные номера. Пока есть.</span>
             </li>
           </ul>
@@ -376,7 +362,7 @@
               <div class="modal-container-wrapper">
                 <button class="modal-visiters-button modal-visiters-button-minus" type="button"></button>
                 <span class="visually-hidden">Уменьить количество взрослых.</span>
-                <input class="modal-visiters-input" type="text" value="2" placeholder="1" required>
+                <input class="modal-visiters-input" name="adults" type="text" value="2" placeholder="1" required>
                 <button class="modal-visiters-button modal-visiters-button-plus" type="button"></button>
                 <span class="visually-hidden">Увеличить количество взрослых.</span>
               </div>
@@ -398,7 +384,7 @@
               <div class="modal-container-wrapper">
                 <button class="modal-visiters-button modal-visiters-button-minus" type="button"></button>
                 <span class="visually-hidden">Уменьить количество детей.</span>
-                <input class="modal-visiters-input" type="text" value="2" placeholder="0">
+                <input class="modal-visiters-input" name="children" type="text" value="2" placeholder="0">
                 <button class="modal-visiters-button modal-visiters-button-plus" type="button"></button>
                 <span class="visually-hidden">Увеличить количество детей.</span>
               </div>
